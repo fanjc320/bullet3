@@ -71,30 +71,30 @@ void TestJointTorqueSetup::initPhysics()
 
 
 	//create a static ground object
-	if (1)
-	{
-		btVector3 groundHalfExtents(1, 1, 0.2);
-		groundHalfExtents[upAxis] = 1.f;
-		btBoxShape* box = new btBoxShape(groundHalfExtents);
-		box->initializePolyhedralFeatures();
+	//if (1)
+	//{
+	//	btVector3 groundHalfExtents(1, 1, 0.2);
+	//	groundHalfExtents[upAxis] = 1.f;
+	//	btBoxShape* box = new btBoxShape(groundHalfExtents);
+	//	box->initializePolyhedralFeatures();
 
-		m_guiHelper->createCollisionShapeGraphicsObject(box);
-		btTransform start;
-		start.setIdentity();
-		btVector3 groundOrigin(-0.4f, 3.f, 0.f);
-		groundOrigin[upAxis] -= .5;
-		groundOrigin[2] -= 0.6;
-		start.setOrigin(groundOrigin);
-		btQuaternion groundOrn(btVector3(0, 1, 0), 0.25 * SIMD_PI);
+	//	m_guiHelper->createCollisionShapeGraphicsObject(box);
+	//	btTransform start;
+	//	start.setIdentity();
+	//	btVector3 groundOrigin(-0.4f, 3.f, 0.f);
+	//	groundOrigin[upAxis] -= .5;
+	//	groundOrigin[2] -= 0.6;
+	//	start.setOrigin(groundOrigin);
+	//	btQuaternion groundOrn(btVector3(0, 1, 0), 0.25 * SIMD_PI);
 
-		//	start.setRotation(groundOrn);
-		btRigidBody* body = createRigidBody(0, start, box);
-		body->setFriction(0);
-		btVector4 color = colors[curColor];
-		curColor++;
-		curColor &= 3;
-		m_guiHelper->createRigidBodyGraphicsObject(body, color);
-	}
+	//	//	start.setRotation(groundOrn);
+	//	btRigidBody* body = createRigidBody(0, start, box);
+	//	body->setFriction(0);
+	//	btVector4 color = colors[curColor];
+	//	curColor++;
+	//	curColor &= 3;
+	//	m_guiHelper->createRigidBodyGraphicsObject(body, color);
+	//}
 
 	{
 		bool floating = false;
@@ -104,7 +104,7 @@ void TestJointTorqueSetup::initPhysics()
 		bool spherical = false;  //set it ot false -to use 1DoF hinges instead of 3DoF sphericals
 		bool canSleep = false;
 		bool selfCollide = false;
-		btVector3 linkHalfExtents(0.05, 0.37, 0.1);
+		btVector3 linkHalfExtents(0.05, 0.37, 0.1);//红，垂直屏幕;绿，垂直地面;蓝；
 		btVector3 baseHalfExtents(0.05, 0.37, 0.1);
 
 		btVector3 basePosition = btVector3(-0.4f, 3.f, 0.f);
@@ -113,6 +113,7 @@ void TestJointTorqueSetup::initPhysics()
 		btVector3 baseInertiaDiag(0.f, 0.f, 0.f);
 		float baseMass = 1.f;
 
+		//计算inertial
 		if (baseMass)
 		{
 			//btCollisionShape *shape = new btSphereShape(baseHalfExtents[0]);// btBoxShape(btVector3(baseHalfExtents[0], baseHalfExtents[1], baseHalfExtents[2]));
@@ -145,13 +146,14 @@ void TestJointTorqueSetup::initPhysics()
 		quat0.normalize();
 		/////
 
-		for (int i = 0; i < numLinks; ++i)
+		for (int i = 0; i < numLinks; ++i)//2
 		{
 			float linkMass = 1.f;
 			//if (i==3 || i==2)
 			//	linkMass= 1000;
 			btVector3 linkInertiaDiag(0.f, 0.f, 0.f);
 
+			//计算inertial
 			btCollisionShape* shape = 0;
 			if (i == 0)
 			{
@@ -164,6 +166,7 @@ void TestJointTorqueSetup::initPhysics()
 			shape->calculateLocalInertia(linkMass, linkInertiaDiag);
 			delete shape;
 
+			//关节
 			if (!spherical)
 			{
 				//pMultiBody->setupRevolute(i, linkMass, linkInertiaDiag, i - 1, btQuaternion(0.f, 0.f, 0.f, 1.f), hingeJointAxis, parentComToCurrentPivot, currentPivotToCurrentCom, false);
@@ -258,37 +261,37 @@ void TestJointTorqueSetup::initPhysics()
 			//	float pos[4]={local_origin[0].x(),local_origin[0].y(),local_origin[0].z(),1};
 			//            btScalar quat[4]={-world_to_local[0].x(),-world_to_local[0].y(),-world_to_local[0].z(),world_to_local[0].w()};
 
-			if (1)
-			{
-				btCollisionShape* shape = new btBoxShape(btVector3(baseHalfExtents[0], baseHalfExtents[1], baseHalfExtents[2]));  //new btSphereShape(baseHalfExtents[0]);
-				m_guiHelper->createCollisionShapeGraphicsObject(shape);
+			//if (1)
+			//{
+			//	btCollisionShape* shape = new btBoxShape(btVector3(baseHalfExtents[0], baseHalfExtents[1], baseHalfExtents[2]));  //new btSphereShape(baseHalfExtents[0]);
+			//	m_guiHelper->createCollisionShapeGraphicsObject(shape);
 
-				btMultiBodyLinkCollider* col = new btMultiBodyLinkCollider(pMultiBody, -1);
-				col->setCollisionShape(shape);
+			//	btMultiBodyLinkCollider* col = new btMultiBodyLinkCollider(pMultiBody, -1);
+			//	col->setCollisionShape(shape);
 
-				btTransform tr;
-				tr.setIdentity();
-				//if we don't set the initial pose of the btCollisionObject, the simulator will do this
-				//when syncing the btMultiBody link transforms to the btMultiBodyLinkCollider
+			//	btTransform tr;
+			//	tr.setIdentity();
+			//	//if we don't set the initial pose of the btCollisionObject, the simulator will do this
+			//	//when syncing the btMultiBody link transforms to the btMultiBodyLinkCollider
 
-				tr.setOrigin(local_origin[0]);
-				btQuaternion orn(btVector3(0, 0, 1), 0.25 * 3.1415926538);
+			//	tr.setOrigin(local_origin[0]);
+			//	btQuaternion orn(btVector3(0, 0, 1), 0.25 * 3.1415926538);
 
-				tr.setRotation(orn);
-				col->setWorldTransform(tr);
+			//	tr.setRotation(orn);
+			//	col->setWorldTransform(tr);
 
-				bool isDynamic = (baseMass > 0 && floating);
-				int collisionFilterGroup = isDynamic ? int(btBroadphaseProxy::DefaultFilter) : int(btBroadphaseProxy::StaticFilter);
-				int collisionFilterMask = isDynamic ? int(btBroadphaseProxy::AllFilter) : int(btBroadphaseProxy::AllFilter ^ btBroadphaseProxy::StaticFilter);
+			//	bool isDynamic = (baseMass > 0 && floating);
+			//	int collisionFilterGroup = isDynamic ? int(btBroadphaseProxy::DefaultFilter) : int(btBroadphaseProxy::StaticFilter);
+			//	int collisionFilterMask = isDynamic ? int(btBroadphaseProxy::AllFilter) : int(btBroadphaseProxy::AllFilter ^ btBroadphaseProxy::StaticFilter);
 
-				world->addCollisionObject(col, collisionFilterGroup, collisionFilterMask);  //, 2,1+2);
+			//	world->addCollisionObject(col, collisionFilterGroup, collisionFilterMask);  //, 2,1+2);
 
-				btVector3 color(0.0, 0.0, 0.5);
-				m_guiHelper->createCollisionObjectGraphicsObject(col, color);
+			//	btVector3 color(0.0, 0.0, 0.5);
+			//	m_guiHelper->createCollisionObjectGraphicsObject(col, color);
 
-				//                col->setFriction(friction);
-				pMultiBody->setBaseCollider(col);
-			}
+			//	//                col->setFriction(friction);
+			//	pMultiBody->setBaseCollider(col);
+			//}
 		}
 
 		for (int i = 0; i < pMultiBody->getNumLinks(); ++i)
