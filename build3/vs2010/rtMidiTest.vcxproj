@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{B5304CF3-0E0A-FE4D-9B09-4D28D6BE7043}</ProjectGuid>
+    <ProjectGuid>{F958BA82-B74D-504C-AE28-7EBCC126B708}</ProjectGuid>
     <RootNamespace>rtMidiTest</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

@@ -31,7 +31,7 @@ public:
 	FixJointBoxes(GUIHelperInterface* helper, int options)
 		: m_guiHelper(helper),
 		  m_options(options),
-		  numCubes(30),
+		  numCubes(10),
 		  cubeIds(numCubes, 0),
 		  solver(solverId)
 	{
@@ -64,13 +64,17 @@ public:
 			for (int i = 0; i < numCubes; i++)
 			{
 				args.m_forceOverrideFixedBase = (i == 0);
-				args.m_startPosition.setValue(0, i * 0.05, 1);
+				//args.m_startPosition.setValue(0, i * 0.05, 1);
+				args.m_startPosition.setValue(0, 0, 0.5+i*0.05);
 				cubeIds[i] = m_robotSim.loadURDF("cube_small.urdf", args);
 
 				b3RobotJointInfo jointInfo;
 
-				jointInfo.m_parentFrame[1] = -0.025;
-				jointInfo.m_childFrame[1] = 0.025;
+				/*jointInfo.m_parentFrame[1] = -0.025;
+				jointInfo.m_childFrame[1] = 0.025;*/
+
+				jointInfo.m_parentFrame[2] = -0.05;
+				jointInfo.m_childFrame[2] = 0.05;
 
 				if (i > 0)
 				{

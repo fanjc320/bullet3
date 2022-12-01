@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{1B589011-4A3E-4349-9BEF-668070851D53}</ProjectGuid>
+    <ProjectGuid>{03493F18-E4DB-6B41-A92C-74A4404F6A81}</ProjectGuid>
     <RootNamespace>Test_Gwen_OpenGL</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

@@ -2,97 +2,97 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="examples">
-      <UniqueIdentifier>{F4F5437D-D9F1-7347-85CA-39DFDD90472B}</UniqueIdentifier>
+      <UniqueIdentifier>{DB5F2167-BF18-7B4B-9698-791A06538AC2}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ThirdPartyLibs">
-      <UniqueIdentifier>{68020B9E-EB72-2949-B9A6-67CEB950427C}</UniqueIdentifier>
+      <UniqueIdentifier>{031F5BF1-6E2D-E041-95E8-37D0768BCD1F}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ThirdPartyLibs\midi">
-      <UniqueIdentifier>{D5FCAF34-E938-5342-AB5A-4C560B2D30D0}</UniqueIdentifier>
+      <UniqueIdentifier>{221B0920-3D84-FA49-99DB-4E9B8A1EB79C}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ThirdPartyLibs\glad">
-      <UniqueIdentifier>{668B2301-2D91-C240-BBCA-BA7E198DCA65}</UniqueIdentifier>
+      <UniqueIdentifier>{881CA117-4F45-AE41-AE8F-046D924407CB}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\SharedMemory">
-      <UniqueIdentifier>{E9BD2FB9-1E21-EF43-9509-24A6EA0E22BD}</UniqueIdentifier>
+      <UniqueIdentifier>{7B6C3EB0-E020-CC41-8899-95CF25DC2AC8}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\SharedMemory\plugins">
-      <UniqueIdentifier>{B741A298-4BC2-E747-9C6B-03DE5B4579C8}</UniqueIdentifier>
+      <UniqueIdentifier>{4C038504-A1B2-5446-BB91-F895318B1C3A}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\SharedMemory\plugins\collisionFilterPlugin">
-      <UniqueIdentifier>{244F856C-C7CA-0949-A000-A58884E43FBD}</UniqueIdentifier>
+      <UniqueIdentifier>{62111306-2C04-A24A-870F-E210E99F1DC1}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\SharedMemory\plugins\pdControlPlugin">
-      <UniqueIdentifier>{4AAE15CE-A700-AA4B-BF7C-87626524893B}</UniqueIdentifier>
+      <UniqueIdentifier>{77A0527A-AF5F-CE46-8452-869125E3D9C8}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\Importers">
-      <UniqueIdentifier>{38104A8B-C01F-0E4B-B5F0-79A8B1372D7D}</UniqueIdentifier>
+      <UniqueIdentifier>{AFC54E42-5383-0341-9006-976FF0631A0A}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\Importers\ImportURDFDemo">
-      <UniqueIdentifier>{30C79C5C-0275-784D-93DF-6D5C37B84CF6}</UniqueIdentifier>
+      <UniqueIdentifier>{8F25DFCE-1875-8A41-BF4B-4C5D088FA725}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\Importers\ImportMJCFDemo">
-      <UniqueIdentifier>{506A5321-8FCB-7443-AF53-B2582B683C55}</UniqueIdentifier>
+      <UniqueIdentifier>{E7735A6D-C904-6141-9FE8-B476FB5EDCC2}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\Utils">
-      <UniqueIdentifier>{D10C5F9B-F684-4946-B9E3-8F52010F55FF}</UniqueIdentifier>
+      <UniqueIdentifier>{C007FAB0-D2A3-F948-8DDB-5943CFF08C51}</UniqueIdentifier>
     </Filter>
     <Filter Include="Extras">
-      <UniqueIdentifier>{C3058BBE-FCEE-C74B-AFD1-1A95FA372A3E}</UniqueIdentifier>
+      <UniqueIdentifier>{9B327D79-C4AB-2C45-B996-9ED7FC9B59C4}</UniqueIdentifier>
     </Filter>
     <Filter Include="Extras\Serialize">
-      <UniqueIdentifier>{9FA50953-7BB1-F345-A820-310B5652E212}</UniqueIdentifier>
+      <UniqueIdentifier>{E0929D8C-41A5-854B-BD8A-593B55E71B5D}</UniqueIdentifier>
     </Filter>
     <Filter Include="Extras\Serialize\BulletWorldImporter">
-      <UniqueIdentifier>{C73E5FA0-57B4-7B45-ACD8-D5AC8FABC7A1}</UniqueIdentifier>
+      <UniqueIdentifier>{11F85698-7727-1A40-9775-1E74F834471A}</UniqueIdentifier>
     </Filter>
     <Filter Include="Extras\Serialize\BulletFileLoader">
-      <UniqueIdentifier>{98215A80-34D6-FA4F-8AB1-50377B86F152}</UniqueIdentifier>
+      <UniqueIdentifier>{F6D62581-0D59-D640-8D81-68220218624A}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\Importers\ImportObjDemo">
-      <UniqueIdentifier>{14B547F4-D5A9-CB43-B880-3A2E21C428A9}</UniqueIdentifier>
+      <UniqueIdentifier>{CB2C3158-5777-CC47-A7E5-9113BF1A72D6}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\Importers\ImportSTLDemo">
-      <UniqueIdentifier>{ECED0FFB-F43C-ED40-B59F-E8AEA2BD8849}</UniqueIdentifier>
+      <UniqueIdentifier>{80CEAFF4-B010-E543-82E6-7A1E3A5511A3}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\Importers\ImportColladaDemo">
-      <UniqueIdentifier>{1C224BAF-977E-0D4B-8248-0803A3A21D7F}</UniqueIdentifier>
+      <UniqueIdentifier>{3B732DCC-6182-B94A-982C-F0B534EBF27A}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ThirdPartyLibs\Wavefront">
-      <UniqueIdentifier>{5B32673D-D162-5B4F-AC42-2F940543DF47}</UniqueIdentifier>
+      <UniqueIdentifier>{9CE14452-11F6-3847-9351-F1B884A28C27}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ThirdPartyLibs\tinyxml2">
-      <UniqueIdentifier>{B752BD44-0B5E-D54F-A232-F55C7834816F}</UniqueIdentifier>
+      <UniqueIdentifier>{FCCD3D58-9FD9-4744-831A-C25E59C5D509}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\Importers\ImportMeshUtility">
-      <UniqueIdentifier>{CEDA137E-D5B8-9F40-BFA0-87EF253E7CE9}</UniqueIdentifier>
+      <UniqueIdentifier>{757A7CE5-BFF2-0447-A203-483214FE9850}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ThirdPartyLibs\stb_image">
-      <UniqueIdentifier>{C97EAE41-0A18-1D4F-95BC-E49F6067F1E7}</UniqueIdentifier>
+      <UniqueIdentifier>{4F21347F-4C2A-EC4E-8DA6-DFEAE561D870}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\StandaloneMain">
-      <UniqueIdentifier>{A67F5EC1-5B9D-C245-9E0B-BD09E0101668}</UniqueIdentifier>
+      <UniqueIdentifier>{A41DD3BD-40E1-E04D-863D-DEB88111AF88}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ExampleBrowser">
-      <UniqueIdentifier>{9B2599FF-4086-6F48-BEE2-AECD45ADC676}</UniqueIdentifier>
+      <UniqueIdentifier>{1A2E314F-B211-2740-BB01-60EBF904A74C}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\RenderingExamples">
-      <UniqueIdentifier>{9DA4B348-BE07-0E44-932E-958B6390A0AB}</UniqueIdentifier>
+      <UniqueIdentifier>{0F5A0089-62D4-0E4F-B257-DACB1BEEDA4F}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ThirdPartyLibs\openvr">
-      <UniqueIdentifier>{A96E628B-FDA8-2F4E-B97A-3A15544E8238}</UniqueIdentifier>
+      <UniqueIdentifier>{1146CE9D-C640-6C42-A2CF-D203D8DBC43B}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ThirdPartyLibs\openvr\samples">
-      <UniqueIdentifier>{19C49A8F-369C-7540-8380-7746D933E3AD}</UniqueIdentifier>
+      <UniqueIdentifier>{E330B419-443A-9440-98E0-97D483DDED36}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ThirdPartyLibs\openvr\samples\shared">
-      <UniqueIdentifier>{9C7D7E9F-4486-9F4C-A307-CC7F92E4DECA}</UniqueIdentifier>
+      <UniqueIdentifier>{D836F3A5-42C2-984B-A8AC-D7860E76E38D}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\SharedMemory\plugins\vrSyncPlugin">
-      <UniqueIdentifier>{DDC3CB08-9ABB-BE45-930B-BFB66B1D3A3C}</UniqueIdentifier>
+      <UniqueIdentifier>{2F11CBAD-E670-CA4D-BE57-65BA8B9F5C9E}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\MultiThreading">
-      <UniqueIdentifier>{80461821-2260-2448-9D2D-9CCC7B33CC44}</UniqueIdentifier>
+      <UniqueIdentifier>{7F921764-1DD8-D944-8077-EE6BE9370471}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{A6A9CA10-3B3B-BA4A-AE15-FB377A88B460}</ProjectGuid>
+    <ProjectGuid>{7FE7BD6F-53F6-A74B-B0E0-DE0A30B8A4C2}</ProjectGuid>
     <RootNamespace>Test_clsocket_QueryDayTime</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

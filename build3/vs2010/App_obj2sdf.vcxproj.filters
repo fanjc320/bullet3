@@ -2,22 +2,22 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Extras">
-      <UniqueIdentifier>{7E0472C5-7348-594F-B7E7-BB43BD8EC3A3}</UniqueIdentifier>
+      <UniqueIdentifier>{FA374979-5C22-864A-B830-FE5035FD4679}</UniqueIdentifier>
     </Filter>
     <Filter Include="Extras\obj2sdf">
-      <UniqueIdentifier>{41FF8A3C-D75F-7D4C-A1D2-FEB57AEA8F15}</UniqueIdentifier>
+      <UniqueIdentifier>{A0CE7142-B0E7-AC45-88C9-DA70AFBA4404}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples">
-      <UniqueIdentifier>{E802E3F6-861A-964F-BA8B-97DF074287F4}</UniqueIdentifier>
+      <UniqueIdentifier>{E757FDB2-5CB6-4E43-8AAD-2DC0DDFB8F9C}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\Utils">
-      <UniqueIdentifier>{C04D121A-BF0A-EF47-A9CC-BF58EA22629A}</UniqueIdentifier>
+      <UniqueIdentifier>{225E9BB2-4341-1741-A7ED-DAE82807DD97}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ThirdPartyLibs">
-      <UniqueIdentifier>{06DA9D2D-8E60-9F48-8D02-31B11F2B674E}</UniqueIdentifier>
+      <UniqueIdentifier>{05712983-4B03-B64C-8C98-5834E5CE4A54}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ThirdPartyLibs\Wavefront">
-      <UniqueIdentifier>{7490928E-117F-0C4D-AF32-97B303E22DFB}</UniqueIdentifier>
+      <UniqueIdentifier>{DE8BA14E-8514-C54D-ADF4-3607D5EFD161}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

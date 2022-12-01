@@ -2,28 +2,28 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="examples">
-      <UniqueIdentifier>{049A00BA-29D5-BF44-B7AD-5B2F4ECF76E4}</UniqueIdentifier>
+      <UniqueIdentifier>{CB188852-07AC-9A48-B20A-81840E13A814}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ThirdPartyLibs">
-      <UniqueIdentifier>{DDB11866-A0A1-9343-B125-E7F0E042F4E9}</UniqueIdentifier>
+      <UniqueIdentifier>{16D17376-FC79-FB49-9E66-3094070F9989}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ThirdPartyLibs\glad">
-      <UniqueIdentifier>{9F16D0B6-C7E8-E544-9038-09346B1258FA}</UniqueIdentifier>
+      <UniqueIdentifier>{A8BE01E4-2E88-3643-B1C1-7358ADFB4F9D}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\OpenGLWindow">
-      <UniqueIdentifier>{E5161A15-7F18-894B-8AA4-D397C617CEAB}</UniqueIdentifier>
+      <UniqueIdentifier>{8FF2681F-42E0-9244-9AC5-F30D442EB509}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\Utils">
-      <UniqueIdentifier>{5BBF32FA-DA9A-454F-A3A7-439F143BDE6E}</UniqueIdentifier>
+      <UniqueIdentifier>{5DDED3E6-066C-EC4A-9788-B5BF7AE54C20}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ThirdPartyLibs\stb_image">
-      <UniqueIdentifier>{1B6BA195-116A-AE4A-A418-3A6D389BDF6A}</UniqueIdentifier>
+      <UniqueIdentifier>{686B1795-3147-E843-953C-05C6C1198C9C}</UniqueIdentifier>
     </Filter>
     <Filter Include="test">
-      <UniqueIdentifier>{C5293378-E8D0-594B-A78C-B703FCA21385}</UniqueIdentifier>
+      <UniqueIdentifier>{1D507144-FAC4-EB4F-8304-55A122675CA9}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\GwenOpenGLTest">
-      <UniqueIdentifier>{22192B10-1837-C14D-B906-630E292562BE}</UniqueIdentifier>
+      <UniqueIdentifier>{87088D8B-6E37-A042-A734-458108A5E022}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

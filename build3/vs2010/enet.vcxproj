@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{0DA53239-A84A-8047-B8ED-4A9A8C90305A}</ProjectGuid>
+    <ProjectGuid>{E53B6C05-E97C-394A-B8D7-8799B3975221}</ProjectGuid>
     <RootNamespace>enet</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

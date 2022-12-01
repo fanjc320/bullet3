@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{A7D6038F-AFDE-924B-A69B-87E8E7096121}</ProjectGuid>
+    <ProjectGuid>{7D0B3007-A7BD-CC4E-BCA7-6DC9BE317319}</ProjectGuid>
     <RootNamespace>Test_OpenCL_Bullet3</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

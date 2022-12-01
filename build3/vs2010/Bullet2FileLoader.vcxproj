@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C9D9CAB6-C47C-7F4A-A65B-462D46CAC021}</ProjectGuid>
+    <ProjectGuid>{F723554F-4396-8B4F-80AC-6373C4B248ED}</ProjectGuid>
     <RootNamespace>Bullet2FileLoader</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

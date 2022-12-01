@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{87CE9E0B-CA7A-3744-ACFC-75CE7B2E02C8}</ProjectGuid>
+    <ProjectGuid>{F7060C17-C752-A84A-8EB2-02E43A78C027}</ProjectGuid>
     <RootNamespace>BulletWorldImporter</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

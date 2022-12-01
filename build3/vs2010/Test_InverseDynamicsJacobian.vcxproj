@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{93F91023-1C25-F248-B5D4-0DDE6FB8635E}</ProjectGuid>
+    <ProjectGuid>{9AF82A77-88F6-434C-B0C9-238B3E0255DF}</ProjectGuid>
     <RootNamespace>Test_InverseDynamicsJacobian</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

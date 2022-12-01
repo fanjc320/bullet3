@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{0FC7EF87-C9DE-7B48-8CE6-DD9D796EBECE}</ProjectGuid>
+    <ProjectGuid>{CD1D8D92-F95A-6E43-A89A-EC9E84CCEAF3}</ProjectGuid>
     <RootNamespace>Test_PhysicsServerInProcessExampleBrowser</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

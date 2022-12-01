@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{2CA8E557-3960-0F49-B972-EAD67DA546E1}</ProjectGuid>
+    <ProjectGuid>{7485A52B-2424-4546-8475-0F859562510C}</ProjectGuid>
     <RootNamespace>Test_enet_nat_punchthrough_server</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

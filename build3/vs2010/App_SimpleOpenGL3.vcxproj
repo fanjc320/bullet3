@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{556C84A3-718D-1E49-9B80-ECE00370F2AF}</ProjectGuid>
+    <ProjectGuid>{E2ECC389-BAA6-4E41-B828-329B38F8839D}</ProjectGuid>
     <RootNamespace>App_SimpleOpenGL3</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

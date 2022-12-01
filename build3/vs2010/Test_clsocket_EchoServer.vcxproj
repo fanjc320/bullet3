@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C5DF66B3-7F60-AD4C-B743-2211921A86FE}</ProjectGuid>
+    <ProjectGuid>{60D29C05-C68F-DB4F-9E13-D9D41D799596}</ProjectGuid>
     <RootNamespace>Test_clsocket_EchoServer</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

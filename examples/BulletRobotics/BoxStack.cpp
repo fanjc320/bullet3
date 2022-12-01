@@ -96,10 +96,12 @@ public:
 
 	virtual void resetCamera()
 	{
-		float dist = 1.5;
-		float pitch = -10;
-		float yaw = 18;
-		float targetPos[3] = {-0.2, 0.8, 0.3};
+		float dist = 3.5;//¾àÀë
+		float pitch = -10;//ÉÏÏÂ
+		float yaw = 18;//×óÓÒ
+		//float yaw = 0;
+		//float targetPos[3] = {-0.2, 0.8, 0.3};
+		float targetPos[3] = {-0.0, 0.0, 0.5};
 
 		m_guiHelper->resetCamera(dist, yaw, pitch, targetPos[0], targetPos[1], targetPos[2]);
 

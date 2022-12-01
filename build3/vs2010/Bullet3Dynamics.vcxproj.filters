@@ -2,16 +2,16 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="src">
-      <UniqueIdentifier>{B2299671-BE47-384E-9AD3-74557B467DC1}</UniqueIdentifier>
+      <UniqueIdentifier>{6C221328-535D-624B-A2C0-FD852467035D}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\Bullet3Dynamics">
-      <UniqueIdentifier>{C20B6A4B-B870-894A-A70D-CB5AE9AD2BC6}</UniqueIdentifier>
+      <UniqueIdentifier>{E610B7DF-0473-184F-A060-4894E9F78D13}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\Bullet3Dynamics\ConstraintSolver">
-      <UniqueIdentifier>{B1B80A23-E1D4-0D40-B400-06E5ADCCEFB2}</UniqueIdentifier>
+      <UniqueIdentifier>{640BB21F-A4F3-2F45-9BB0-30561AF4EEEB}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\Bullet3Dynamics\shared">
-      <UniqueIdentifier>{97592E05-662E-5D4F-8D87-8893FB240002}</UniqueIdentifier>
+      <UniqueIdentifier>{A95E42D4-21FD-314E-9F0F-B0F5B329A8DB}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

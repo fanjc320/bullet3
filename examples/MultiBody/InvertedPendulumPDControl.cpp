@@ -102,7 +102,7 @@ btMultiBody* createInvertedPendulumMultiBody(btMultiBodyDynamicsWorld* world, GU
 	quat0.normalize();
 	/////
 
-	for (int i = 0; i < numLinks; ++i)
+	for (int i = 0; i < numLinks; ++i)//2
 	{
 		float linkMass = 1.f;
 		//if (i==3 || i==2)

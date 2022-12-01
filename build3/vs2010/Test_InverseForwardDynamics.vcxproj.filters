@@ -2,64 +2,64 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="test">
-      <UniqueIdentifier>{65B2B685-28AB-5A4A-ADB7-A504B6B05205}</UniqueIdentifier>
+      <UniqueIdentifier>{6B7A310A-6AF0-B646-A3BA-E1F42B7CFEC4}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\InverseDynamics">
-      <UniqueIdentifier>{D27385D7-9A2E-004E-BCAF-5C431649F8AE}</UniqueIdentifier>
+      <UniqueIdentifier>{9006509B-A166-3C40-9AA4-EA42AD0EA351}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples">
-      <UniqueIdentifier>{EC225601-8BB0-604B-AA91-DC2A9275DB7A}</UniqueIdentifier>
+      <UniqueIdentifier>{254ACCF8-3403-C244-8D4A-531CBFE15168}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\Utils">
-      <UniqueIdentifier>{9178CBA1-5869-674D-A2BD-9CE02C5BA0D8}</UniqueIdentifier>
+      <UniqueIdentifier>{134C9FE0-A81F-7142-A496-F694926C01B1}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\Importers">
-      <UniqueIdentifier>{7B2010AE-C884-A340-8869-42F7AECDBAA8}</UniqueIdentifier>
+      <UniqueIdentifier>{2B758653-34BE-D944-92DD-E23B72B38E33}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\Importers\ImportURDFDemo">
-      <UniqueIdentifier>{A8F9C64E-81C8-D343-ADB1-1030A24F0E56}</UniqueIdentifier>
+      <UniqueIdentifier>{00466BF4-3A65-4749-8962-5FF05018E9CC}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\Importers\ImportMeshUtility">
-      <UniqueIdentifier>{817A8595-6BE5-5B40-BC28-E5E08BDE5471}</UniqueIdentifier>
+      <UniqueIdentifier>{CDF27D8A-09C2-1442-B9BC-562B4501D342}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ThirdPartyLibs">
-      <UniqueIdentifier>{251516C1-B44C-F64D-A329-2E6E1054DBE5}</UniqueIdentifier>
+      <UniqueIdentifier>{2E3527E0-F5B7-E146-86A8-DC256413E3CC}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ThirdPartyLibs\stb_image">
-      <UniqueIdentifier>{18A18E73-462C-B646-800E-83CC8C385288}</UniqueIdentifier>
+      <UniqueIdentifier>{95B7E43F-2648-1F46-8CA1-ACE110D3608F}</UniqueIdentifier>
     </Filter>
     <Filter Include="Extras">
-      <UniqueIdentifier>{9D98425A-4FC5-6E4E-B710-68FF152C6C62}</UniqueIdentifier>
+      <UniqueIdentifier>{A1D834D0-7F9D-3B4D-A637-0C2D28A5BB12}</UniqueIdentifier>
     </Filter>
     <Filter Include="Extras\Serialize">
-      <UniqueIdentifier>{07760B44-9173-E24F-8E99-CE566A410254}</UniqueIdentifier>
+      <UniqueIdentifier>{B1D0F5DB-6182-5048-BD74-2174D2372FAE}</UniqueIdentifier>
     </Filter>
     <Filter Include="Extras\Serialize\BulletWorldImporter">
-      <UniqueIdentifier>{3B0D56A5-13D9-A042-888A-EF065B955C22}</UniqueIdentifier>
+      <UniqueIdentifier>{FE99746B-C2E6-0C47-BE00-3C6E87039932}</UniqueIdentifier>
     </Filter>
     <Filter Include="Extras\Serialize\BulletFileLoader">
-      <UniqueIdentifier>{87647826-473D-9E48-86A9-E91A28CFC69D}</UniqueIdentifier>
+      <UniqueIdentifier>{4D318949-4EBD-7244-A410-03DD310C717A}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\Importers\ImportObjDemo">
-      <UniqueIdentifier>{E027C971-7DB8-4742-AD70-EE16DE94BE92}</UniqueIdentifier>
+      <UniqueIdentifier>{AA8039F4-94B5-924D-A423-62022C2CE119}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\Importers\ImportSTLDemo">
-      <UniqueIdentifier>{7DDD3FE4-DFA1-5C4A-8174-C737DBFAC8DB}</UniqueIdentifier>
+      <UniqueIdentifier>{FC0BD255-943B-354F-A6CF-10022C0B525B}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\Importers\ImportColladaDemo">
-      <UniqueIdentifier>{EEA32CC7-6079-C044-BF26-C06147A55B61}</UniqueIdentifier>
+      <UniqueIdentifier>{9B2643E8-4B5A-174B-9DDE-AC2A17C4E445}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ThirdPartyLibs\Wavefront">
-      <UniqueIdentifier>{3AD9FCDC-7AC2-134A-9B82-9BB6C58A6FA2}</UniqueIdentifier>
+      <UniqueIdentifier>{8BDBFC1A-3B5B-184A-9276-E8C17E70D4D0}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ThirdPartyLibs\tinyxml2">
-      <UniqueIdentifier>{ED21E6FC-B204-AD49-AFB2-D4FD586EE4BA}</UniqueIdentifier>
+      <UniqueIdentifier>{E0EEF73A-F85B-D645-9956-96B7BC48D96A}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ThirdPartyLibs\urdf">
-      <UniqueIdentifier>{7C2E2AD1-DF1D-504A-B610-4FEC7CD94213}</UniqueIdentifier>
+      <UniqueIdentifier>{43548A54-1506-6F46-8C55-3F0AAD07F368}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ThirdPartyLibs\urdf\boost_replacement">
-      <UniqueIdentifier>{6A8F716A-8BE0-034E-A876-43D7BD58F284}</UniqueIdentifier>
+      <UniqueIdentifier>{E6024846-8343-0846-83C4-DF9BC8AD39A0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

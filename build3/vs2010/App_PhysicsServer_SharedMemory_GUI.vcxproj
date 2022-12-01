@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{66FE55BB-4FEC-4C4F-BC24-49A6D63CF4AD}</ProjectGuid>
+    <ProjectGuid>{48504C74-801A-E445-9839-D057DB9712E1}</ProjectGuid>
     <RootNamespace>App_PhysicsServer_SharedMemory_GUI</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

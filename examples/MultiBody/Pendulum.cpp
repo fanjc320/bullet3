@@ -150,12 +150,13 @@ void Pendulum::initPhysics()
 			pMultiBody->getLink(i).m_collider = col;
 		}
 
-		btAlignedObjectArray<btQuaternion> scratch_q;
+		//√ª”√?
+		/*btAlignedObjectArray<btQuaternion> scratch_q;
 		btAlignedObjectArray<btVector3> scratch_m;
 		pMultiBody->forwardKinematics(scratch_q, scratch_m);
 		btAlignedObjectArray<btQuaternion> world_to_local;
 		btAlignedObjectArray<btVector3> local_origin;
-		pMultiBody->updateCollisionObjectWorldTransforms(world_to_local, local_origin);
+		pMultiBody->updateCollisionObjectWorldTransforms(world_to_local, local_origin);*/
 	}
 }
 

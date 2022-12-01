@@ -2,28 +2,28 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="examples">
-      <UniqueIdentifier>{C6B1E059-8AE3-5349-87AB-1D1B573F34BB}</UniqueIdentifier>
+      <UniqueIdentifier>{1857932E-C12C-9E43-8D90-47F3A0F1BBF8}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ThirdPartyLibs">
-      <UniqueIdentifier>{5868E25B-B16E-9F4C-AC9F-858AC480C8F3}</UniqueIdentifier>
+      <UniqueIdentifier>{DA4B3011-99D0-764B-8C83-742EB5C3A9BB}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ThirdPartyLibs\glad">
-      <UniqueIdentifier>{4FDF06CE-F05F-5946-9BCC-901C256E3BDB}</UniqueIdentifier>
+      <UniqueIdentifier>{EABEA324-B7A1-FB4A-883A-02FEF6417236}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\SharedMemory">
-      <UniqueIdentifier>{18808FA8-784E-4D49-A473-6CD561664F43}</UniqueIdentifier>
+      <UniqueIdentifier>{EA3E5C3F-C05F-1D4E-9124-FAB3FDB063A5}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\RobotSimulator">
-      <UniqueIdentifier>{AD4C2CFE-C11B-6A42-98FF-F1921B3F8224}</UniqueIdentifier>
+      <UniqueIdentifier>{CE65DCE5-8EF0-AE43-AB7C-3087FD94B58A}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ExampleBrowser">
-      <UniqueIdentifier>{04F3F090-BEEC-2946-AA32-0438FBA9324B}</UniqueIdentifier>
+      <UniqueIdentifier>{4197DAB1-5F54-244F-86BB-8CE3860BBA3A}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\SharedMemory\plugins">
-      <UniqueIdentifier>{3BA178C1-3CA6-3045-8E62-FCBDA3CA0B5B}</UniqueIdentifier>
+      <UniqueIdentifier>{574DD5C7-D109-6C4F-A0D0-67AE28B7686A}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\SharedMemory\plugins\vrSyncPlugin">
-      <UniqueIdentifier>{0A61DBD1-72C9-9E4C-B9DC-CE1E8DAC3EF3}</UniqueIdentifier>
+      <UniqueIdentifier>{2FAD317A-32E2-D34D-B8A5-7E7B21580239}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

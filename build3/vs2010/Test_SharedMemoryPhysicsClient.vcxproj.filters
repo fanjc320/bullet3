@@ -2,19 +2,19 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="test">
-      <UniqueIdentifier>{BBE30A03-556B-D441-AF93-3E7244DBF2EF}</UniqueIdentifier>
+      <UniqueIdentifier>{249A0001-ED23-AA4C-A54E-38863AA5B088}</UniqueIdentifier>
     </Filter>
     <Filter Include="test\SharedMemory">
-      <UniqueIdentifier>{C38314D2-E332-A14F-A5C9-F5B09A82E870}</UniqueIdentifier>
+      <UniqueIdentifier>{8B0C12F1-4162-6442-993D-4C062BAFC9B2}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples">
-      <UniqueIdentifier>{9DAB8188-AB01-1548-8DE3-07B76AD6D2D9}</UniqueIdentifier>
+      <UniqueIdentifier>{CB6A499C-E5ED-5845-B061-A585E594A5DC}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\SharedMemory">
-      <UniqueIdentifier>{A8681C9F-7DB2-4B48-B283-DA16DEA69703}</UniqueIdentifier>
+      <UniqueIdentifier>{69E0361D-0CA6-D949-B13C-CDBFD9714865}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\Utils">
-      <UniqueIdentifier>{8C92E0FF-ADEC-3949-A27D-605709FD5189}</UniqueIdentifier>
+      <UniqueIdentifier>{6092E0CF-6E21-D846-9706-DAA2608C7FBE}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{D66BE3A1-FCE2-A843-8C06-C6CFC9469783}</ProjectGuid>
+    <ProjectGuid>{AE55463E-C6EC-E244-85F4-404400234856}</ProjectGuid>
     <RootNamespace>App_HelloBulletRobotics</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

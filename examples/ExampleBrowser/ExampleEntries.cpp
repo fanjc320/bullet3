@@ -83,6 +83,8 @@
 #include "../ReducedDeformableDemo/ReducedMotorGrasp.h"
 #include "../ReducedDeformableDemo/ReducedBenchmark.h"
 #include "../InverseKinematics/InverseKinematicsExample.h"
+#include "../BulletRobotics/FixJointBoxes.h"
+#include "../BulletRobotics/BoxStack.h"
 
 #ifdef B3_ENABLE_TINY_AUDIO
 #include "../TinyAudio/TinyAudioExample.h"
@@ -157,6 +159,8 @@ static ExampleEntry gDefaultExamples[] =
 		ExampleEntry(1, "Gyroscopic", "Show the Dzhanibekov effect using various settings of the gyroscopic term. You can select the gyroscopic term computation using btRigidBody::setFlags, with arguments BT_ENABLE_GYROSCOPIC_FORCE_EXPLICIT (using explicit integration, which adds energy and can lead to explosions), BT_ENABLE_GYROSCOPIC_FORCE_IMPLICIT_WORLD, BT_ENABLE_GYROSCOPIC_FORCE_IMPLICIT_BODY. If you don't set any of these flags, there is no gyroscopic term used.", GyroscopicCreateFunc),
 
 		ExampleEntry(1, "Soft Contact", "Using the error correction parameter (ERP) and constraint force mixing (CFM) values for contacts to simulate compliant contact.", RigidBodySoftContactCreateFunc),
+		ExampleEntry(1, "FixJointBoxes", "by fjc.", FixJointBoxesCreateFunc),
+		ExampleEntry(1, " BoxStack", "by fjc.", BoxStackExampleCreateFunc),
     ExampleEntry(1, "Kinematic Body", "Let the user set the transform, the physics engine computes the velocity for one-way contact and friction interaction.", KinematicRigidBodyExampleCreateFunc),
 
 		ExampleEntry(0, "MultiBody"),

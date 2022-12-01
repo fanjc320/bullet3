@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{FB369B94-32FE-4746-81B3-FEAAA4455F2E}</ProjectGuid>
+    <ProjectGuid>{1275D11E-92E6-B043-B093-EB0EED385D02}</ProjectGuid>
     <RootNamespace>App_obj2sdf</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

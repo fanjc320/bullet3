@@ -2,22 +2,22 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Extras">
-      <UniqueIdentifier>{9AD5476D-8633-FD44-B467-615DE5DB8E3C}</UniqueIdentifier>
+      <UniqueIdentifier>{29D5FB46-11FA-F848-B540-4BE63815D4CF}</UniqueIdentifier>
     </Filter>
     <Filter Include="Extras\Serialize">
-      <UniqueIdentifier>{0139B7D7-5FE0-8943-9646-CAC69F62A124}</UniqueIdentifier>
+      <UniqueIdentifier>{A0956A80-4C10-654B-A5B7-4EDAF212BA63}</UniqueIdentifier>
     </Filter>
     <Filter Include="Extras\Serialize\BulletXmlWorldImporter">
-      <UniqueIdentifier>{41DB2C1E-1E13-9243-84FB-D4EA6E03FB18}</UniqueIdentifier>
+      <UniqueIdentifier>{269C7D73-BFB2-384C-B6A8-230B91A2D423}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples">
-      <UniqueIdentifier>{9B9B31C6-8DF5-DC43-AC19-5039FEEBC90C}</UniqueIdentifier>
+      <UniqueIdentifier>{6A9F3E67-F6F8-494C-9AC3-D86235C5BAA4}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ThirdPartyLibs">
-      <UniqueIdentifier>{5D6C5643-99E6-8A46-8D35-59CBE358BBF8}</UniqueIdentifier>
+      <UniqueIdentifier>{32C87EEA-A15E-1B46-9913-F73E388DEA6F}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ThirdPartyLibs\tinyxml2">
-      <UniqueIdentifier>{6000F8EC-C2F9-4B48-B2AC-94FF6F70C5D9}</UniqueIdentifier>
+      <UniqueIdentifier>{32974FC3-43C5-1B40-AC5A-7E9950583A1C}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

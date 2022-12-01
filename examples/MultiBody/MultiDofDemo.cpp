@@ -161,9 +161,10 @@ void MultiDofDemo::initPhysics()
 	bool multibodyOnly = false;
 	bool canSleep = false;
 	bool selfCollide = true;
-	bool multibodyConstraint = false;
-	btVector3 linkHalfExtents(0.05, 0.37, 0.1);
-	btVector3 baseHalfExtents(0.05, 0.37, 0.1);
+	bool multibodyConstraint = true;
+	btVector3 linkHalfExtents(0.1, 0.3, 0.1);
+	//btVector3 baseHalfExtents(0.1, 0.4, 0.3);
+	btVector3 baseHalfExtents(0.1, 0.4, 0.1);//对应颜色rgb
 
 	btMultiBody* mbC = createFeatherstoneMultiBody_testMultiDof(world, numLinks, btVector3(-0.4f, 3.f, 0.f), baseHalfExtents, linkHalfExtents, spherical, g_floatingBase);
 	//mbC->forceMultiDof();							//if !spherical, you can comment this line to check the 1DoF algorithm
@@ -186,7 +187,7 @@ void MultiDofDemo::initPhysics()
 	m_dynamicsWorld->setGravity(btVector3(0, -9.81, 0));
 	//m_dynamicsWorld->getSolverInfo().m_numIterations = 100;
 	//////////////////////////////////////////////
-	if (numLinks > 0)
+	/*if (numLinks > 0)
 	{
 		btScalar q0 = 45.f * SIMD_PI / 180.f;
 		if (!spherical)
@@ -199,7 +200,7 @@ void MultiDofDemo::initPhysics()
 			quat0.normalize();
 			mbC->setJointPosMultiDof(0, quat0);
 		}
-	}
+	}*/
 	///
 	addColliders_testMultiDof(mbC, world, baseHalfExtents, linkHalfExtents);
 
@@ -293,9 +294,10 @@ btMultiBody* MultiDofDemo::createFeatherstoneMultiBody_testMultiDof(btMultiBodyD
 		delete pTempBox;
 	}
 
-	bool canSleep = false;
+	bool canSleep = false;//似乎作用不大
 
-	btMultiBody* pMultiBody = new btMultiBody(numLinks, baseMass, baseInertiaDiag, !floating, canSleep);
+	btMultiBody* pMultiBody = new btMultiBody(numLinks +1, baseMass, baseInertiaDiag, !floating, canSleep);
+	//btMultiBody* pMultiBody = new btMultiBody(numLinks, baseMass, baseInertiaDiag, floating, canSleep);//会直接掉下去
 
 	btQuaternion baseOriQuat(0.f, 0.f, 0.f, 1.f);
 	pMultiBody->setBasePos(basePosition);
@@ -313,6 +315,7 @@ btMultiBody* MultiDofDemo::createFeatherstoneMultiBody_testMultiDof(btMultiBodyD
 	delete pTempBox;
 
 	//y-axis assumed up
+	//btVector3 parentComToCurrentCom(0, -linkHalfExtents[1] * 2.f, 0);                      //par body's COM to cur body's COM offset
 	btVector3 parentComToCurrentCom(0, -linkHalfExtents[1] * 2.f, 0);                      //par body's COM to cur body's COM offset
 	btVector3 currentPivotToCurrentCom(0, -linkHalfExtents[1], 0);                         //cur body's COM to cur body's PIV offset
 	btVector3 parentComToCurrentPivot = parentComToCurrentCom - currentPivotToCurrentCom;  //par body's COM to cur body's PIV offset
@@ -332,6 +335,10 @@ btMultiBody* MultiDofDemo::createFeatherstoneMultiBody_testMultiDof(btMultiBodyD
 			pMultiBody->setupSpherical(i, linkMass, linkInertiaDiag, i - 1, btQuaternion(0.f, 0.f, 0.f, 1.f), parentComToCurrentPivot, currentPivotToCurrentCom, true);
 	}
 
+	//pMultiBody->setupRevolute(numLinks, linkMass, linkInertiaDiag, numLinks - 1, btQuaternion(0.0f, 0.f, 0.f, 1.f), hingeJointAxis, parentComToCurrentPivot, btVector3(0, -linkHalfExtents[1], 0), true);
+	pMultiBody->setupRevolute(numLinks, linkMass, linkInertiaDiag, numLinks - 1, btQuaternion(0.0f, 0.f, 0.f, 1.f), hingeJointAxis, parentComToCurrentPivot, btVector3(0, 0, 0), true);
+	//pMultiBody->setupSpherical(numLinks, linkMass, linkInertiaDiag, numLinks - 1, btQuaternion(0.f, 0.f, 0.f, 1.f), parentComToCurrentPivot, currentPivotToCurrentCom, true);
+
 	pMultiBody->finalizeMultiDof();
 
 	///
@@ -343,6 +350,7 @@ btMultiBody* MultiDofDemo::createFeatherstoneMultiBody_testMultiDof(btMultiBodyD
 void MultiDofDemo::addColliders_testMultiDof(btMultiBody* pMultiBody, btMultiBodyDynamicsWorld* pWorld, const btVector3& baseHalfExtents, const btVector3& linkHalfExtents)
 {
 	btAlignedObjectArray<btQuaternion> world_to_local;
+	int numLinks = pMultiBody->getNumLinks();
 	world_to_local.resize(pMultiBody->getNumLinks() + 1);
 
 	btAlignedObjectArray<btVector3> local_origin;
@@ -352,7 +360,7 @@ void MultiDofDemo::addColliders_testMultiDof(btMultiBody* pMultiBody, btMultiBod
 
 	{
 		//	float pos[4]={local_origin[0].x(),local_origin[0].y(),local_origin[0].z(),1};
-		btScalar quat[4] = {-world_to_local[0].x(), -world_to_local[0].y(), -world_to_local[0].z(), world_to_local[0].w()};
+		btScalar quat[4] = {-world_to_local[0].x(), -world_to_local[0].y(), -world_to_local[0].z(), world_to_local[0].w()};// - ????? 
 
 		if (1)
 		{
@@ -377,7 +385,7 @@ void MultiDofDemo::addColliders_testMultiDof(btMultiBody* pMultiBody, btMultiBod
 	{
 		const int parent = pMultiBody->getParent(i);
 		world_to_local[i + 1] = pMultiBody->getParentToLocalRot(i) * world_to_local[parent + 1];
-		local_origin[i + 1] = local_origin[parent + 1] + (quatRotate(world_to_local[i + 1].inverse(), pMultiBody->getRVector(i)));
+		local_origin[i + 1] = local_origin[parent + 1] + (quatRotate(world_to_local[i + 1].inverse(), pMultiBody->getRVector(i)));//????? !!!!
 	}
 
 	for (int i = 0; i < pMultiBody->getNumLinks(); ++i)

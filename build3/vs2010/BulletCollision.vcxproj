@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{8507EBD4-878B-D74D-928A-A7102C3859D0}</ProjectGuid>
+    <ProjectGuid>{905F721B-FA66-2D45-B13A-DD17D9B8B7CB}</ProjectGuid>
     <RootNamespace>BulletCollision</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

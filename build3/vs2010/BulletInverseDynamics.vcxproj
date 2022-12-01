@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{CC72A578-F98B-3A41-BBBA-9DC17C1495A8}</ProjectGuid>
+    <ProjectGuid>{28832186-7D83-DD4F-8CCC-716E19216497}</ProjectGuid>
     <RootNamespace>BulletInverseDynamics</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

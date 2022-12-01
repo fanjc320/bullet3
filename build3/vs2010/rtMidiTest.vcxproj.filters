@@ -2,13 +2,13 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="examples">
-      <UniqueIdentifier>{319BDC9A-7AB5-4645-9F51-9AA3A0081C1C}</UniqueIdentifier>
+      <UniqueIdentifier>{F2C8BD5D-EBD3-1240-8EEF-7C614E30A575}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ThirdPartyLibs">
-      <UniqueIdentifier>{25417C82-6483-3A40-9E22-711292BB9225}</UniqueIdentifier>
+      <UniqueIdentifier>{9D5E70E7-1CB9-9142-8E02-8D664C3DBE24}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ThirdPartyLibs\midi">
-      <UniqueIdentifier>{E440F50F-3ADD-E148-8A04-BB551B8A5E74}</UniqueIdentifier>
+      <UniqueIdentifier>{491270CA-2E2A-0E45-A8BF-BF0AE70AF674}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{79B18D8B-7A32-294E-B511-08388DA90D04}</ProjectGuid>
+    <ProjectGuid>{8F1B5EEE-BA9B-7047-AF16-B01B0E59420E}</ProjectGuid>
     <RootNamespace>LinearMath</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

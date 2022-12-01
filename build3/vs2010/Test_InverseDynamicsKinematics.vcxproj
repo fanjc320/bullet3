@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{E1EEE8FA-9143-174D-B470-E079C6D51EB5}</ProjectGuid>
+    <ProjectGuid>{6490C341-E4C7-F643-81A7-C57F50EC7498}</ProjectGuid>
     <RootNamespace>Test_InverseDynamicsKinematics</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

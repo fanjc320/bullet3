@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{3878CFAD-E960-0946-9EC5-2E33EC8C8854}</ProjectGuid>
+    <ProjectGuid>{0F9EB504-1F82-1B45-B556-8A689305755F}</ProjectGuid>
     <RootNamespace>Bullet3Geometry</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{71AE62D7-E4E7-6F42-9F9C-3D2D485961C2}</ProjectGuid>
+    <ProjectGuid>{946229EC-FA4B-EE44-A6B5-63E12127775B}</ProjectGuid>
     <RootNamespace>HACD</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

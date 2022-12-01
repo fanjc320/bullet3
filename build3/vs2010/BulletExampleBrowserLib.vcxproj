@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{970AB9A5-5600-5243-838C-EE185BBF0B82}</ProjectGuid>
+    <ProjectGuid>{EAEA6464-7FCF-1449-9D38-99BACA5AD859}</ProjectGuid>
     <RootNamespace>BulletExampleBrowserLib</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

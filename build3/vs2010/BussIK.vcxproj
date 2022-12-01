@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{EB9F602E-7453-824B-B965-1F6ADFB80BDA}</ProjectGuid>
+    <ProjectGuid>{07BADCB6-23F5-8441-985E-41E1B726C8E5}</ProjectGuid>
     <RootNamespace>BussIK</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

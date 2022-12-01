@@ -59,6 +59,7 @@ class btGeneric6DofSpring2Constraint* MyMultiBodyCreator::allocateGeneric6DofSpr
 	return c;
 }
 
+//Prismatic Joint的作用是在一个方向上移动某一个刚体，移动的最大距离和最小距离可以定义，移动过程中刚体不能转动。一般可以用着活塞运动。
 class btGeneric6DofSpring2Constraint* MyMultiBodyCreator::createPrismaticJoint(int urdfLinkIndex, btRigidBody& rbA /*parent*/, btRigidBody& rbB, const btTransform& offsetInA, const btTransform& offsetInB,
 																			   const btVector3& jointAxisInJointSpace, btScalar jointLowerLimit, btScalar jointUpperLimit)
 {
@@ -104,6 +105,12 @@ class btGeneric6DofSpring2Constraint* MyMultiBodyCreator::createPrismaticJoint(i
 	m_6DofConstraints.push_back(dof6);
 	return dof6;
 }
+
+//Revolute 在这里是旋转的意思，Revolute Joint便是旋转关节的意思。 可以想象成我们日常生活中的门，拉一下，门就会围绕着墙边旋转。 和distance Joint一样，Revolute Joint也有两个锚点。锚点的位置是和对应的rigidbody绑定的。 在场景simulate之后，锚点会控制rigidbody移动和旋转。 Unity 3D中HingeJoint就是用Revolute Joint来实现的。 在Unity 3D中HingeJoint有三种功能：
+//———————————————— 版权声明：本文为CSDN博主「听不懂道理」的原创文章，遵循CC 4.0 BY - SA版权协议，转载请附上原文出处链接及本声明。 原文链接：https :  //blog.csdn.net/xiazeye/article/details/78453787
+//1.Spring 这个功能的作用就是 产生一个旋转的弹力。就像我们平时开了门，门的弹簧会自动把门扣上。 
+//2.Limit 这个功能的作用就是设置Joint的极限。就像我们平时用力把门关上，门的内侧撞到墙会把门反弹回来 
+//3.Motor 这个功能的作用就是给Joint设置一个旋转速度，像发动机一样
 
 class btGeneric6DofSpring2Constraint* MyMultiBodyCreator::createRevoluteJoint(int urdfLinkIndex, btRigidBody& rbA /*parent*/, btRigidBody& rbB, const btTransform& offsetInA, const btTransform& offsetInB,
 																			  const btVector3& jointAxisInJointSpace, btScalar jointLowerLimit, btScalar jointUpperLimit)

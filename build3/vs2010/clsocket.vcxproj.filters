@@ -2,16 +2,16 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="examples">
-      <UniqueIdentifier>{363B5657-7FAF-6543-932D-449776CCB1C6}</UniqueIdentifier>
+      <UniqueIdentifier>{2C976181-B0D3-5B47-AA2B-D7D2B843D592}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ThirdPartyLibs">
-      <UniqueIdentifier>{FCC014A8-7551-1840-8DA2-489DE7E34B5F}</UniqueIdentifier>
+      <UniqueIdentifier>{E0E83204-D8FD-B54A-8F7E-AB3E4F5A68AB}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ThirdPartyLibs\clsocket">
-      <UniqueIdentifier>{76B63B8F-8878-8246-BBB8-F2D59879F55E}</UniqueIdentifier>
+      <UniqueIdentifier>{DC8D3D1B-EC79-C946-A91F-0129D1417397}</UniqueIdentifier>
     </Filter>
     <Filter Include="examples\ThirdPartyLibs\clsocket\src">
-      <UniqueIdentifier>{09188D1B-2513-A54E-A1AF-1E04084B0399}</UniqueIdentifier>
+      <UniqueIdentifier>{F87B7B1D-9738-1740-8B77-F78B0B223514}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

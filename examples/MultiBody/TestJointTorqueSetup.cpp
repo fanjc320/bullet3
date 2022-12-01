@@ -230,7 +230,7 @@ void TestJointTorqueSetup::initPhysics()
 			mbC->setAngularDamping(0.9f);
 		}
 		//
-		m_dynamicsWorld->setGravity(btVector3(0, 0, -10));
+		m_dynamicsWorld->setGravity(btVector3(0, 0, -10));//zÖáÊÇÉÏÏÂ?
 
 		//////////////////////////////////////////////
 		if (/* DISABLES CODE */ (0))  //numLinks > 0)
@@ -297,7 +297,7 @@ void TestJointTorqueSetup::initPhysics()
 		for (int i = 0; i < pMultiBody->getNumLinks(); ++i)
 		{
 			const int parent = pMultiBody->getParent(i);
-			world_to_local[i + 1] = pMultiBody->getParentToLocalRot(i) * world_to_local[parent + 1];
+			world_to_local[i + 1] = pMultiBody->getParentToLocalRot(i) * world_to_local[parent + 1];//?????
 			local_origin[i + 1] = local_origin[parent + 1] + (quatRotate(world_to_local[i + 1].inverse(), pMultiBody->getRVector(i)));
 		}
 
@@ -362,7 +362,7 @@ void TestJointTorqueSetup::stepSimulation(float deltaTime)
 	if (/* DISABLES CODE */ (0))  //m_once)
 	{
 		m_once = false;
-		m_multiBody->addJointTorque(0, 10.0);
+		//m_multiBody->addJointTorque(0, 10.0);
 
 		btScalar torque = m_multiBody->getJointTorque(0);
 		b3Printf("t = %f,%f,%f\n", torque, torque, torque);  //[0],torque[1],torque[2]);
