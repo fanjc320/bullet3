@@ -133,7 +133,8 @@ void TestJointTorqueSetup::initPhysics()
 		//	pMultiBody->setBaseVel(vel);
 
 		//init the links
-		btVector3 hingeJointAxis(1, 0, 0);
+		//btVector3 hingeJointAxis(1, 0, 0);
+		btVector3 hingeJointAxis(0, 0, 1);
 
 		//y-axis assumed up
 		btVector3 parentComToCurrentCom(0, -linkHalfExtents[1] * 2.f, 0);                      //par body's COM to cur body's COM offset
@@ -172,7 +173,7 @@ void TestJointTorqueSetup::initPhysics()
 				//pMultiBody->setupRevolute(i, linkMass, linkInertiaDiag, i - 1, btQuaternion(0.f, 0.f, 0.f, 1.f), hingeJointAxis, parentComToCurrentPivot, currentPivotToCurrentCom, false);
 
 				if (i == 0)
-				{
+				{//这里i-1-> -1, 作为父节点
 					pMultiBody->setupRevolute(i, linkMass, linkInertiaDiag, i - 1,
 											  btQuaternion(0.f, 0.f, 0.f, 1.f),
 											  hingeJointAxis,
@@ -203,13 +204,13 @@ void TestJointTorqueSetup::initPhysics()
 		pMultiBody->finalizeMultiDof();
 
 		//for (int i=pMultiBody->getNumLinks()-1;i>=0;i--)//
-		for (int i = 0; i < pMultiBody->getNumLinks(); i++)
-		{
-			btMultiBodyJointFeedback* fb = new btMultiBodyJointFeedback();
-			pMultiBody->getLink(i).m_jointFeedback = fb;
-			m_jointFeedbacks.push_back(fb);
-			//break;
-		}
+		//for (int i = 0; i < pMultiBody->getNumLinks(); i++)
+		//{
+		//	btMultiBodyJointFeedback* fb = new btMultiBodyJointFeedback();
+		//	pMultiBody->getLink(i).m_jointFeedback = fb;
+		//	m_jointFeedbacks.push_back(fb);
+		//	//break;
+		//}
 		btMultiBodyDynamicsWorld* world = m_dynamicsWorld;
 
 		///
@@ -230,11 +231,12 @@ void TestJointTorqueSetup::initPhysics()
 			mbC->setAngularDamping(0.9f);
 		}
 		//
-		m_dynamicsWorld->setGravity(btVector3(0, 0, -10));//z轴是上下?
+		//m_dynamicsWorld->setGravity(btVector3(0, 0, -10));//注意这里,引力在z轴
+		m_dynamicsWorld->setGravity(btVector3(0, 0, 0));//注意这里,引力在z轴
 
-		//////////////////////////////////////////////
-		if (/* DISABLES CODE */ (0))  //numLinks > 0)
-		{
+		//////////////////////////////////////////////设置起始位置
+		//if (/* DISABLES CODE */ (0))  //numLinks > 0)
+		/*{
 			btScalar q0 = 45.f * SIMD_PI / 180.f;
 			if (!spherical)
 			{
@@ -246,7 +248,7 @@ void TestJointTorqueSetup::initPhysics()
 				quat0.normalize();
 				mbC->setJointPosMultiDof(0, quat0);
 			}
-		}
+		}*/
 		///
 
 		btAlignedObjectArray<btQuaternion> world_to_local;
@@ -362,7 +364,8 @@ void TestJointTorqueSetup::stepSimulation(float deltaTime)
 	if (/* DISABLES CODE */ (0))  //m_once)
 	{
 		m_once = false;
-		//m_multiBody->addJointTorque(0, 10.0);
+		m_multiBody->addJointTorque(0, 10.0);//Does btMultiBody::addJointTorque work?
+		//https://pybullet.org/Bullet/phpBB3/viewtopic.php?t=10130 更新到2.85以后
 
 		btScalar torque = m_multiBody->getJointTorque(0);
 		b3Printf("t = %f,%f,%f\n", torque, torque, torque);  //[0],torque[1],torque[2]);

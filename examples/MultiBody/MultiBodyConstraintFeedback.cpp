@@ -341,7 +341,7 @@ void MultiBodyConstraintFeedbackSetup::initPhysics()
 		int link = 0;
 		int targetVelocity = 0.f;
 		btScalar maxForce = 100000;
-		m_motor = new btMultiBodyJointMotor(pMultiBody, link, targetVelocity, maxForce);
+		m_motor = new btMultiBodyJointMotor(pMultiBody, link, targetVelocity, maxForce);//!!!!!
 		m_dynamicsWorld->addMultiBodyConstraint(m_motor);
 	}
 }

@@ -38,15 +38,16 @@ void kinematicPreTickCallback(btDynamicsWorld* world, btScalar deltaTime)
 	btTransformUtil::integrateTransform(groundBody->getBaseWorldTransform(), linearVelocity, angularVelocity, deltaTime, predictedTrans);
 	groundBody->setBaseWorldTransform(predictedTrans);
 	groundBody->setBaseVel(linearVelocity);
-	groundBody->setBaseOmega(angularVelocity);
+	groundBody->setBaseOmega(angularVelocity);//地面
 
 	static float time = 0.0;
 	time += deltaTime;
 	double old_joint_pos = groundBody->getJointPos(0);
-	double joint_pos = 0.5 * sin(time * 3.0 - 0.3);
+	//double joint_pos = 0.5 * sin(time * 3.0 - 0.3);
+	double joint_pos = sin(time * 3.0);
 	double joint_vel = (joint_pos - old_joint_pos) / deltaTime;
 	groundBody->setJointPosMultiDof(0, &joint_pos);
-	groundBody->setJointVelMultiDof(0, &joint_vel);
+	groundBody->setJointVelMultiDof(0, &joint_vel); // 去掉之后，大方块本身的运动未受影响，大方块和上面的小方块摩擦力为0
 }
 
 struct KinematicMultiBodyExample : public CommonMultiBodyBase
@@ -127,6 +128,7 @@ void KinematicMultiBodyExample::initPhysics()
 		//init the child link - second level.
 		btVector3 hingeJointAxis(0, 1, 0);
 		m_groundBody->setupRevolute(0, secondLevelMass, secondLevelInertiaDiag, -1, btQuaternion(0.f, 0.f, 0.f, 1.f), hingeJointAxis, btVector3(0, 0.5, 0), btVector3(0, 0, 0), true);
+		//m_groundBody->setupRevolute(0, secondLevelMass, secondLevelInertiaDiag, -1, btQuaternion(0.f, 0.f, 0.f, 1.f), hingeJointAxis, btVector3(0, 0, 0), btVector3(0, 0, 0), true);
 
 		m_groundBody->finalizeMultiDof();
 		m_dynamicsWorld->addMultiBody(m_groundBody);
@@ -148,7 +150,7 @@ void KinematicMultiBodyExample::initPhysics()
 		m_groundBody->getLink(0).m_collider = secondLevelCol;
 		m_groundBody->setLinkDynamicType(0, btCollisionObject::CF_KINEMATIC_OBJECT);
 	}
-	m_dynamicsWorld->setInternalTickCallback(kinematicPreTickCallback, m_groundBody, true);
+	m_dynamicsWorld->setInternalTickCallback(kinematicPreTickCallback, m_groundBody, true);//!!!!
 
 	{
 		//create a few dynamic rigidbodies

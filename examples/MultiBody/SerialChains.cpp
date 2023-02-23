@@ -141,9 +141,10 @@ void SerialChains::initPhysics()
 	bool selfCollide = true;
 	btVector3 linkHalfExtents(0.05, 0.37, 0.1);
 	btVector3 baseHalfExtents(0.05, 0.37, 0.1);
+	//btVector3 baseHalfExtents(0.05, 0.17, 0.1);//父子位置有重合，扭曲，碰撞导致的吗?????
 
 	btMultiBody* mbC1 = createFeatherstoneMultiBody(world, numLinks, btVector3(-0.4f, 3.f, 0.f), linkHalfExtents, baseHalfExtents, spherical, g_fixedBase);
-	btMultiBody* mbC2 = createFeatherstoneMultiBody(world, numLinks, btVector3(-0.4f, 3.0f, 0.5f), linkHalfExtents, baseHalfExtents, spherical, g_fixedBase);
+	btMultiBody* mbC2 = createFeatherstoneMultiBody(world, numLinks - 1, btVector3(-0.4f, 3.0f, 0.5f), linkHalfExtents, baseHalfExtents, !spherical, g_fixedBase);
 
 	mbC1->setCanSleep(canSleep);
 	mbC1->setHasSelfCollision(selfCollide);
@@ -161,8 +162,8 @@ void SerialChains::initPhysics()
 	}
 	//
 	m_dynamicsWorld->setGravity(btVector3(0, -9.81, 0));
-	//////////////////////////////////////////////
-	if (numLinks > 0)
+	////////////////////////////////////////////// 设置起始位置
+	/*if (numLinks > 0)
 	{
 		btScalar q0 = 45.f * SIMD_PI / 180.f;
 		if (!spherical)
@@ -175,7 +176,7 @@ void SerialChains::initPhysics()
 			quat0.normalize();
 			mbC1->setJointPosMultiDof(0, quat0);
 		}
-	}
+	}*/
 	///
 	addColliders(mbC1, world, baseHalfExtents, linkHalfExtents);
 
@@ -196,7 +197,7 @@ void SerialChains::initPhysics()
 	//
 	m_dynamicsWorld->setGravity(btVector3(0, -9.81, 0));
 	//////////////////////////////////////////////
-	if (numLinks > 0)
+	/*if (numLinks > 0)
 	{
 		btScalar q0 = -45.f * SIMD_PI / 180.f;
 		if (!spherical)
@@ -209,7 +210,7 @@ void SerialChains::initPhysics()
 			quat0.normalize();
 			mbC2->setJointPosMultiDof(0, quat0);
 		}
-	}
+	}*/
 	///
 	addColliders(mbC2, world, baseHalfExtents, linkHalfExtents);
 

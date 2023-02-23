@@ -209,7 +209,7 @@ btMultiBody* createInvertedPendulumMultiBody(btMultiBodyDynamicsWorld* world, GU
 			btCollisionShape* shape = new btBoxShape(btVector3(baseHalfExtents[0], baseHalfExtents[1], baseHalfExtents[2]));  //new btSphereShape(baseHalfExtents[0]);
 			guiHelper->createCollisionShapeGraphicsObject(shape);
 
-			btMultiBodyLinkCollider* col = new btMultiBodyLinkCollider(pMultiBody, -1);
+			btMultiBodyLinkCollider* col = new btMultiBodyLinkCollider(pMultiBody, -1);//不是单独的collider
 			col->setCollisionShape(shape);
 
 			btTransform tr;
@@ -347,7 +347,8 @@ char fileName[1024];
 static btAlignedObjectArray<btScalar> qDesiredArray;
 void InvertedPendulumPDControl::stepSimulation(float deltaTime)
 {
-	static btScalar offset = -0.1 * SIMD_PI;
+	//static btScalar offset = -0.1 * SIMD_PI;
+	static btScalar offset = -0.25 * SIMD_PI;
 
 	m_frameCount++;
 	if ((m_frameCount & 0xff) == 0)
@@ -366,7 +367,7 @@ void InvertedPendulumPDControl::stepSimulation(float deltaTime)
 		btScalar positionError = (qDesiredArray[joint] - qActual);
 		double desiredVelocity = 0;
 		btScalar velocityError = (desiredVelocity - qdActual);
-		btScalar force = kp * positionError + kd * velocityError;
+		btScalar force = kp * positionError + kd * velocityError; //!!!!!
 		btClamp(force, -maxForce, maxForce);
 		m_multiBody->addJointTorque(joint, force);
 	}

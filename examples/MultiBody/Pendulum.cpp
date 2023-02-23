@@ -162,7 +162,9 @@ void Pendulum::initPhysics()
 
 void Pendulum::stepSimulation(float deltaTime)
 {
-	m_multiBody->addJointTorque(0, 20.0);
+	//为何每次摆球都会回到垂直位置呢????
+	//m_multiBody->addJointTorque(0, 20.0);
+	m_multiBody->addJointTorque(0, 5.0);
 #ifdef USE_GTEST
 	m_dynamicsWorld->stepSimulation(1. / 1000.0, 0);
 #else
