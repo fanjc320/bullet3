@@ -888,7 +888,7 @@ void ConvertURDF2Bullet(
 		}
 		btAlignedObjectArray<btQuaternion> scratch_q;
 		btAlignedObjectArray<btVector3> scratch_m;
-		mb->forwardKinematics(scratch_q, scratch_m); //!!!!!
+		mb->forwardKinematics(scratch_q, scratch_m); //!!!!!// size:8,size:8
 		mb->updateCollisionObjectWorldTransforms(scratch_q, scratch_m); //!!!!!
 
 		world1->addMultiBody(mb);

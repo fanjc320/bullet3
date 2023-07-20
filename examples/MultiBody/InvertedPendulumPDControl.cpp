@@ -178,7 +178,7 @@ btMultiBody* createInvertedPendulumMultiBody(btMultiBodyDynamicsWorld* world, GU
 	//////////////////////////////////////////////
 	if (numLinks > 0)
 	{
-		btScalar q0 = 180.f * SIMD_PI / 180.f;
+		/*btScalar q0 = 180.f * SIMD_PI / 180.f;
 		if (!spherical)
 		{
 			mbC->setJointPosMultiDof(0, &q0);
@@ -188,7 +188,7 @@ btMultiBody* createInvertedPendulumMultiBody(btMultiBodyDynamicsWorld* world, GU
 			btQuaternion quat0(btVector3(1, 1, 0).normalized(), q0);
 			quat0.normalize();
 			mbC->setJointPosMultiDof(0, quat0);
-		}
+		}*/
 	}
 	///
 
@@ -345,31 +345,31 @@ void InvertedPendulumPDControl::initPhysics()
 char fileName[1024];
 
 static btAlignedObjectArray<btScalar> qDesiredArray;
-void InvertedPendulumPDControl::stepSimulation(float deltaTime)
+void InvertedPendulumPDControl::stepSimulation(float deltaTime)//0.1
 {
 	//static btScalar offset = -0.1 * SIMD_PI;
-	static btScalar offset = -0.25 * SIMD_PI;
+	static btScalar offset = -0.25 * SIMD_PI;//-0.785
 
 	m_frameCount++;
 	if ((m_frameCount & 0xff) == 0)
 	{
 		offset = -offset;
 	}
-	btScalar target = SIMD_PI + offset;
+	btScalar target = SIMD_PI + offset;//2.356
 	qDesiredArray.resize(0);
 	qDesiredArray.resize(m_multiBody->getNumLinks(), target);
 
 	for (int joint = 0; joint < m_multiBody->getNumLinks(); joint++)
 	{
 		int dof1 = 0;
-		btScalar qActual = m_multiBody->getJointPosMultiDof(joint)[dof1];
-		btScalar qdActual = m_multiBody->getJointVelMultiDof(joint)[dof1];
-		btScalar positionError = (qDesiredArray[joint] - qActual);
+		btScalar qActual = m_multiBody->getJointPosMultiDof(joint)[dof1];//3.14= (0)[0] 0=  0.034950859092116482
+		btScalar qdActual = m_multiBody->getJointVelMultiDof(joint)[dof1];//0 0 2.0970515455269889 
+		btScalar positionError = (qDesiredArray[joint] - qActual);// 2.356 2.3212436311002285 
 		double desiredVelocity = 0;
-		btScalar velocityError = (desiredVelocity - qdActual);
-		btScalar force = kp * positionError + kd * velocityError; //!!!!!
-		btClamp(force, -maxForce, maxForce);
-		m_multiBody->addJointTorque(joint, force);
+		btScalar velocityError = (desiredVelocity - qdActual);//0=0-0
+		btScalar force = kp * positionError + kd * velocityError; //!!!!! =100*2.356+20*0
+		btClamp(force, -maxForce, maxForce);// , -100, +100
+		m_multiBody->addJointTorque(joint, force);// (0,100) (1,100)
 	}
 
 	if (m_frameCount == 100)

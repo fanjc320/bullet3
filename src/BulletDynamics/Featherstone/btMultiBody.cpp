@@ -1875,7 +1875,7 @@ void btMultiBody::stepPositionsMultiDof(btScalar dt, btScalar *pq, btScalar *pqd
 		pqd += 6;
 
 	// Finally we can update m_jointPos for each of the m_links
-	for (int i = 0; i < num_links; ++i)
+	for (int i = 0; i < num_links; ++i)//5
 	{
 		if (!(m_links[i].m_collider && m_links[i].m_collider->isStaticOrKinematic()))
 		{
